@@ -1,5 +1,5 @@
 const cache = require("./cache");
-const consoled = require("consoled.js")
+const consoled = require("consoled.js") // npm i consoled.js@1.0.4
 // Require node-fetch module
 const fetch = require('node-fetch'); //npm i node-fetch@2.6.1
 const express = require("express");
