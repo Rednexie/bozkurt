@@ -8,7 +8,7 @@ const port = 80;
 // Define a middleware function
 function blockIPs(req, res, next) {
   // Get the IP address of the request
-  let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  let ip = req.connection.remoteAddress || req.socket.remoteAdress || req.headers['x-forwarded-for'];
   if(ip.includes("::ffff:")) return next()
   if(ip == "::1") return next()
   // Define a URL for the ip-api service
